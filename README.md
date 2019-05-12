@@ -7,5 +7,5 @@ This repository contains solutions for the problems in different data structures
 
 1. Inorder to run a C program first you have to compile the program (code). Follow the below step to compile the code
      *gcc program_name (ex:- gcc helloWorld.c)*
-2. Once after compiling a C program, it produces a *a.out* file , using this file we can run the compiled program, to run the compiled code, follow the below command
+2. Once after compiling a C program, it produces a file named *a.out*, using this file we can run the compiled program, to run the compiled code, follow the below command
      *./a.out*
