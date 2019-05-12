@@ -19,7 +19,7 @@ int main(){
     int arr[] = { 1,2,3,4,5,6 };
 
     // Initializing integer variables
-    int d = 2,i,j,temp;
+    int d = 2,n = 6,i,j,temp;
 
     // Looping through the array for 'd' times
     for(i = 0; i < d; i++){
@@ -28,7 +28,7 @@ int main(){
         temp = arr[0];
 
         // Looping from 1st element till the end and moving eacn element towards the left
-        for(j = 1; j < 6; j++){
+        for(j = 1; j < n; j++){
             arr[j - 1] = arr[j];
         }
 
@@ -37,7 +37,7 @@ int main(){
     }
 
     // printing the final array 
-    for(i = 0; i < 6; i++){
+    for(i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
 
