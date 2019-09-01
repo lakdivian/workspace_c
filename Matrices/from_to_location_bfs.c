@@ -43,13 +43,13 @@ struct Cell deque(){
     return ret_cell;
 }
 
-bool isValid(int row, int col, int Mat[][4]){
-    if(row >= 0 && row < 4 && col >= 0 && col < 4 && Mat[row][col])
+bool isValid(int row, int col, int Mat[][M]){
+    if(row >= 0 && row < N && col >= 0 && col < M && Mat[row][col])
         return true;
     return false;
 }
 
-int shortest_distance(struct Cell start,struct Cell end, int Mat[][4],bool Vert[][4]){
+int shortest_distance(struct Cell start,struct Cell end, int Mat[][M],bool Vert[][M]){
 
        enque(start);
        Vert[start.row][start.col] = true;
@@ -107,7 +107,7 @@ int main(){
         }
     } 
 
-    bool Vert[4][4];
+    bool Vert[N][M];
     memset(Vert,false,sizeof(Vert));
 
     front = NULL;
@@ -120,7 +120,7 @@ int main(){
     start.dist = 0, end.dist = 0;
 
     int dist = shortest_distance(start,end,Mat,Vert);
-    
+
     if(dist == INT16_MAX || !Vert[end.row][end.col]){
         printf("-1\n");
         return 0;
